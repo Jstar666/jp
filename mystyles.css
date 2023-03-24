@@ -1,0 +1,176 @@
+* {
+	box-sizing: border-box;
+}
+ 
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #ffffff;
+  background-image: url("http://img.mm4000.com/file/6/b5/155c5ffcb3.png" );
+  background-repeat: repeat;
+  background-size: 100%;    
+  margin: -webkit-calc(0rem);
+  align-items: center;
+}
+
+.row {
+	background-color:rgba(0, 0, 0, 0.1);
+}
+.row .leftcolumn .card div {
+	color: #ffffff;
+	
+}
+.row .leftcolumn .card p {
+	color:#FFFFFF
+}
+/* 头部标题 */
+.header h1 {
+  font-size: 60px;
+  font-family:MS Mincho;
+  color: #f3f3f3;
+  font-stretch: semi-expanded;
+  padding: 30px;
+  text-align: center;
+  background: transparent;
+  border-radius:25px;
+  box-shadow: 10px 10px 5px #e7e7e7;
+  float:left;
+}
+.header p{	
+	font-size: 20px;
+	font-family: Algerian;
+	color: #AFFF83;
+}
+ 
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-image: linear-gradient(to right, #c0fffb, #28ff10);
+  border:1px white;
+  border-radius:15px;
+}
+ 
+/* 导航条链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #096464;
+  text-align: center;
+  padding: 14px 16px;	
+  text-decoration: double;
+}
+ 
+/* 链接颜色修改 */
+.topnav a:hover {
+  background-color: #12bfbf;
+  color: black;
+}
+ 
+/* 创建两列 */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+ 
+.leftpara {
+ 	width:300px; 
+ 	height:50px; 
+ 	line-height:25px; 
+ 	overflow:hidden
+ }
+/* 右侧栏 */
+.rightcolumn {
+  float: right;
+  width: 20%;
+  background-color: rgba(255, 143, 14, 0.6);
+  padding-left: 20px;
+  color: white;
+}
+
+.card {
+  background-color: transparent;
+  padding: 5px;
+  margin-top: 1px;
+  color:white;
+  
+  overflow: hidden /* 隐藏超出范围的内容 */
+  text-overflow: ellipsis /* 文本溢出包含元素时显示省略符号来代表被修剪的文本 */
+}
+
+/* 图像部分 */
+.fakeimg {
+  background-color: transparent;
+  width: 50%;
+  height: 60px;
+  padding: auto;
+}
+ 
+/* 文章卡片效果 */
+
+ 
+/* 列后面清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ /* 底部 */
+
+.footer {
+  padding: 1px;
+  text-align: center;
+  background: darkgray;
+  margin-top: 1px;
+}
+.footer h2{
+	color: #ffffff
+}
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+/*设置按钮格式*/  
+.button {
+  background: #3498db;
+  width: 100px;
+  padding: 4px 0;
+  
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 3px;
+
+  p {
+   	font-family: 'Roboto'; 
+	  text-align: center;
+  	text-transform: uppercase;
+    color: #FFF;
+    user-select: none;
+  }
+  
+  &:hover {
+    cursor: pointer;
+  }
+  
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: darken(#f1c40f, 20%);
+    opacity: 0.4;
+    bottom: -30px;
+  }
+}
+
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
