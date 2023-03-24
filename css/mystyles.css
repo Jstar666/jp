@@ -6,7 +6,7 @@ body {
   font-family: Arial;
   padding: 10px;
   background: #ffffff;
-  background-image: scr="./img/233.jpg";
+  background-image: url("./img/233.jpg");
   background-repeat: repeat;
   background-size: 100%;    
   margin: -webkit-calc(0rem);
